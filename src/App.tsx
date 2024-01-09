@@ -1,23 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Input from './Input/Input'
+import Table from './Table/Table';
+
+import {Grid} from '@mui/material';
+import IRuleStats from './Interfaces/IRuleStats';
 
 function App() {
+
+  let [content, setContent] = useState<IRuleStats[]>([]);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Grid mr={10} ml={10}>
+          <Grid sx={{textAlign: 'center'}} mb={3}>
+            <h4>Paste your iRule stats here (tmsh show rule)</h4>
+            This parsing occurs 100% in your browser. If you want to host it yourself you can get the code here:
+
+          </Grid>
+          <Grid>
+            <Input setContent={setContent}/>
+          </Grid>
+          <Grid mt={1}>
+            <Table content={content}/>
+          </Grid>
+        </Grid>
       </header>
     </div>
   );
