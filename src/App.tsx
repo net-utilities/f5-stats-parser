@@ -15,8 +15,8 @@ function App() {
         <Grid mr={10} ml={10}>
           <Grid sx={{textAlign: 'center'}} mb={3}>
             <h4>Paste your iRule stats here (tmsh show rule)</h4>
-            This parsing occurs 100% in your browser. If you want to host it yourself you can get the code here:
-
+            This parsing occurs 100% in your browser.
+            If you want to host it yourself you can get the code <a href={"https://github.com/net-utilities/irule-stats-parser"}>here</a>.
           </Grid>
           <Grid>
             <Input setContent={setContent}/>
