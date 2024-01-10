@@ -14,13 +14,13 @@ function parseRule(rawText: string): IRuleStats[] {
       .map((rule, index) => {
         let [
           name,
-          trash,
+          ,
           priority,
-          trash3,
+          ,
           executions,
           failures,
           aborts,
-          trash4,
+          ,
           average,
           maximum,
           minimum
