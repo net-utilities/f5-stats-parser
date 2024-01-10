@@ -15,7 +15,7 @@ function parseRule(rawText: string): {[key: string]: string|number}[] {
           trash,
           priority,
           trash3,
-          total,
+          executions,
           failures,
           aborts,
           trash4,
@@ -29,7 +29,7 @@ function parseRule(rawText: string): {[key: string]: string|number}[] {
         return {
           name,
           priority: f(priority),
-          total: f(total),
+          executions: f(executions),
           failures: f(failures),
           aborts: f(aborts),
           average: f(average),
