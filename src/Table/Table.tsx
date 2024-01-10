@@ -2,7 +2,6 @@ import * as React from 'react';
 import {DataGrid, GridColDef, GridColumnGroupingModel, GridValueGetterParams} from '@mui/x-data-grid';
 import IRuleStats from '../Interfaces/IRuleStats';
 
-
 export default function DataTable(props: {content: IRuleStats[]}) {
 
   const {content} = props;

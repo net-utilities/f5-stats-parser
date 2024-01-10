@@ -1,4 +1,6 @@
-function parseRule(rawText: string): {[key: string]: string|number}[] {
+import IRuleStats from '../Interfaces/IRuleStats';
+
+function parseRule(rawText: string): IRuleStats[] {
   const f = (s:string) => {
     const number = parseInt(s.split(/[a-zA-Z] +/)[1].replace('K',''));
     return s.includes('K') ? number * 1000: number

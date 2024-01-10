@@ -1,8 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {useEffect} from 'react';
-import ParseRule from '../Helpers/ParseRule'
 import IRuleStats from '../Interfaces/IRuleStats';
 import parseRule from '../Helpers/ParseRule';
 
