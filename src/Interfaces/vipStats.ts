@@ -1,6 +1,6 @@
 interface IRuleStats {
+  id: string,
   name: string,
-  priority: number,
   executions: number,
   aborts: number,
   average: number,
