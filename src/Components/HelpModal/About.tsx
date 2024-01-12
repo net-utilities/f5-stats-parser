@@ -1,19 +1,11 @@
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Code from '../Command/Code';
+import Typography from '@mui/material/Typography';
 import ViewColumnIcon from '@mui/icons-material/ViewColumn';
 import Button from '@mui/material/Button';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import InfoIcon from '@mui/icons-material/Info';
-import poolExampleData from '../../ExampleData/poolExampleData';
 import PolylineIcon from '@mui/icons-material/Polyline';
-import vipExampleData from '../../ExampleData/vipExampleData';
 import VerticalAlignBottomIcon from '@mui/icons-material/VerticalAlignBottom';
-import ruleExampleData from '../../ExampleData/ruleExampleData';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 
 export default function About() {

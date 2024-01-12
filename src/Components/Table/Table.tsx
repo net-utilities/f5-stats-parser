@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {DataGrid, GridColDef, GridColumnGroupingModel, GridToolbar} from '@mui/x-data-grid';
+import {DataGrid, GridColDef, GridToolbar} from '@mui/x-data-grid';
 import filterFunctions from '../../Helpers/FieldTranslations';
 import {LTMObject} from '../../Interfaces/ltmObjects';
 

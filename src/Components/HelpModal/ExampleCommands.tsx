@@ -1,6 +1,4 @@
-import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-
 import Command from '../Command/Command';
 import * as React from 'react';
 import Code from '../Command/Code';

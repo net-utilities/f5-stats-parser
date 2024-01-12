@@ -5,16 +5,13 @@ import MenuItem from '@mui/material/MenuItem';
 import ListItemText from '@mui/material/ListItemText';
 import KeyboardIcon from '@mui/icons-material/Keyboard';
 import InfoIcon from '@mui/icons-material/Info';
-import Typography from '@mui/material/Typography';
 import ContentCut from '@mui/icons-material/ContentCut';
 import ContentCopy from '@mui/icons-material/ContentCopy';
 import StorageIcon from '@mui/icons-material/Storage';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import {Grid, List, ListItem} from '@mui/material';
-import Command from '../Command/Command';
+import {Grid} from '@mui/material';
 import About from './About';
 import ExampleCommands from './ExampleCommands';
-import {MouseEventHandler, useState} from 'react';
+import {useState} from 'react';
 import HostItYourself from './HostYourself';
 
 export default function HelpMenu() {

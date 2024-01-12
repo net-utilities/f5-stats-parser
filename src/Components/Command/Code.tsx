@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import {ReactElement} from 'react';
 
 export default function Code(props: { text: string}) {
 

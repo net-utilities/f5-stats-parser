@@ -1,10 +1,9 @@
-import Paper from '@mui/material/Paper';
+import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import {Grid, List, ListItem} from '@mui/material';
+import {List, ListItem} from '@mui/material';
 import ListItemText from '@mui/material/ListItemText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Command from '../Command/Command';
-import * as React from 'react';
 import Box from '@mui/material/Box';
 
 export default function HostItYourself() {
