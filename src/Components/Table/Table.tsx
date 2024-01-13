@@ -3,17 +3,17 @@ import {DataGrid, GridColDef, GridToolbar} from '@mui/x-data-grid';
 import filterFunctions from '../../Helpers/FieldTranslations';
 import {LTMObject} from '../../Interfaces/ltmObjects';
 
-export default function DataTable(props: {content: LTMObject[]}) {
+export default function DataTable(props: {ltmData: LTMObject[]}) {
 
-  const {content} = props;
+  const {ltmData} = props;
 
   let columns: GridColDef[] = [];
 
-  const {type} = content[0];
+  const {type} = ltmData[0];
   let { defaultColumns, columnTranslations } = type in filterFunctions ? filterFunctions[type] : { defaultColumns: [], columnTranslations: {}};
 
   columns.push({ field: 'name', headerName: 'name', flex: 1 })
-  Object.keys(content[0]).filter(k => !['name', 'type', 'id'].includes(k)).forEach((k) => {
+  Object.keys(ltmData[0]).filter(k => !['name', 'type', 'id'].includes(k)).forEach((k) => {
       columns.push({ field: k, headerName: columnTranslations && columnTranslations[k] || k});
   });
 
@@ -25,14 +25,14 @@ export default function DataTable(props: {content: LTMObject[]}) {
 
   return (
     <div style={{ height: '100%', width: '100%' }}>
-      {content.length === 0 ? '':
+      {ltmData.length === 0 ? '':
         <DataGrid
           slots={{
             toolbar: GridToolbar,
           }}
           density='compact'
           experimentalFeatures={{ columnGrouping: true }}
-          rows={content}
+          rows={ltmData}
           columns={columns}
           initialState={{
             pagination: {

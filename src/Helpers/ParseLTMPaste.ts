@@ -29,7 +29,7 @@ function parseData(rawText: string): LTMObject[] {
           const [k, ...v] = objArr[i].trim().split(/ /)
           ltmObject[k] = /^[0-9]+/.test(v.join()) ? parseInt(v.join()): v.join(' ');
         }
-        ltmObject.id = `${ltmObject.name}${ltmObject.type}`;
+        ltmObject.id = objArr[0];
         return ltmObject;
       })
   )

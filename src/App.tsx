@@ -13,10 +13,13 @@ import Code from './Components/Command/Code';
 
 function App() {
 
-  let [content, setContent] = useState<LTMObject[]>([]);
+  let [ltmData, setLtmData] = useState<LTMObject[]>([]);
   const [inputContent, setInputContent] = useState<string>('')
-
   const [open, setOpen] = React.useState(false);
+
+  const handleLTMDataChange = (value: LTMObject[]) => {
+    setLtmData([...value])
+  }
 
   return (
     <div className="App">
@@ -28,12 +31,12 @@ function App() {
         </Grid>
         <Grid item xs={12}>
           <Paper elevation={3}>
-            <Input inputContent={inputContent} setContent={setContent}/>
+            <Input inputContent={inputContent} setLTMData={handleLTMDataChange}/>
           </Paper>
         </Grid>
         <Grid item xs={12} mt={1}>
           <Paper elevation={3}>
-            { content.length > 0 ? <Table content={content}/>: '' }
+            { ltmData.length > 0 ? <Table ltmData={ltmData}/>: '' }
           </Paper>
         </Grid>
       </Grid>

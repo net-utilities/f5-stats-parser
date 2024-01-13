@@ -607,6 +607,7 @@ ltm pool example_NAT64/App1/web_pool {
     serverside.max-conns 0
     serverside.pkts-in 0
     serverside.pkts-out 0
+    serverside.pkts-out 0Berättade jag om Firefly?
     serverside.tot-conns 0
     status.availability-state offline
     status.enabled-state enabled

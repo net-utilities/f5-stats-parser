@@ -5,22 +5,11 @@ import {LTMObject} from '../../Interfaces/ltmObjects';
 import parseRule from '../../Helpers/ParseLTMPaste';
 import {ChangeEvent, useEffect} from 'react';
 
-export default function MultilineTextFields(props: { inputContent: string, setContent: (content: LTMObject[]) => void}) {
+export default function MultilineTextFields(props: { inputContent: string, setLTMData: (content: LTMObject[]) => void}) {
 
-  const {inputContent, setContent} = props;
+  const {inputContent, setLTMData} = props;
 
-  useEffect(() => setContent(parseRule(inputContent)),[inputContent]);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const target = (e as ChangeEvent<HTMLInputElement>).target;
-    if(target) {
-      setContent(parseRule(target.value))
-      return;
-    }
-    if(inputContent){
-      setContent(parseRule(inputContent))
-    }
-  }
+  useEffect(() => setLTMData(parseRule(inputContent)),[inputContent]);
 
   return (
     <Box
@@ -36,7 +25,7 @@ export default function MultilineTextFields(props: { inputContent: string, setCo
           rows={4}
           value={inputContent}
           sx={{width: '100%'}}
-          onChange={e => setContent(parseRule(e.target.value))}
+          onChange={e => setLTMData(parseRule(e.target.value))}
         />
     </Box>
   );
