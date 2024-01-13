@@ -27,7 +27,7 @@ function App() {
         <Grid item xs={12} sx={{textAlign: 'center'}} mb={3}>
           <Typography variant='h4' mb={1}>F5 TMSH Stats Generator</Typography>
           <Typography display={'inline'}>
-            Creates <Typography display={'inline'} fontWeight={'bold'} color={'#0e6eb9'}>order</Typography> from <Typography display={'inline'} fontWeight={'bold'} color={'#e30f37'}>tmsh</Typography> chaos. Check out the About <InfoIcon sx={{verticalAlign: 'middle', marginBottom: '4px'}} color='primary'/> below <TurnRightIcon sx={{marginTop: '5px', verticalAlign: 'middle', transform: 'rotate(90deg)'}}/> </Typography>
+            Creates <span style={{fontWeight: 'bold', color: '#0e6eb9'}}>order</span> from <span style={{fontWeight: 'bold', color: '#e30f37'}}>tmsh</span> chaos. Check out the About <InfoIcon sx={{verticalAlign: 'middle', marginBottom: '4px'}} color='primary'/> below <TurnRightIcon sx={{marginTop: '5px', verticalAlign: 'middle', transform: 'rotate(90deg)'}}/> </Typography>
         </Grid>
         <Grid item xs={12}>
           <Paper elevation={3}>
