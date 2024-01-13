@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
-import {List, ListItem} from '@mui/material';
+import {Link, List, ListItem} from '@mui/material';
 import ListItemText from '@mui/material/ListItemText';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import Command from '../Command/Command';
@@ -14,7 +14,15 @@ export default function HostItYourself() {
       <Typography>That said, if you prefer you can also clone this repo and host it yourself by:</Typography>
       <List dense sx={{ listStyle: "decimal", pl: 4 }}>
         <ListItem sx={{ display: "list-item" }}>
-          <ListItemText><Typography>Clone the repo on GitHub <GitHubIcon sx={{verticalAlign:"middle", marginBottom: '5px'}} fontSize={'small'}/></Typography></ListItemText>
+          <ListItemText>
+            <Typography>
+              <Link underline={'none'} href='https://github.com/net-utilities/irule-stats-parser'>Clone the repo
+              on GitHub <GitHubIcon sx={{verticalAlign:"middle", marginBottom: '5px', color: '#000'}} fontSize={'small'}/></Link>
+            </Typography>
+          </ListItemText>
+        </ListItem>
+        <ListItem sx={{ display: "list-item" }}>
+          <ListItemText><Typography>Navigate to the repo folder</Typography></ListItemText>
         </ListItem>
         <ListItem sx={{ display: "list-item" }}>
           <ListItemText><Typography>Run <Command command={'npm install'}/></Typography></ListItemText>
