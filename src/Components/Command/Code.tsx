@@ -5,8 +5,8 @@ export default function Code(props: { text: string}) {
 
   const {text} = props;
 
-  return <Typography
-    sx={{
+  return <span
+    style={{
       cursor: 'pointer',
       background: '#eee',
       display: 'inline',
@@ -17,6 +17,6 @@ export default function Code(props: { text: string}) {
     }}
   >
     {text}
-  </Typography>
+  </span>
 
 }

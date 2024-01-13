@@ -18,7 +18,7 @@ export default function Command(props: {command: string}) {
   }
 
   return <Tooltip title="Click to copy" placement="top">
-    <Box onClick={copyCommand} display={'inline'}>
+    <span onClick={copyCommand}>
       <Code
         text={command}
       />
@@ -26,7 +26,7 @@ export default function Command(props: {command: string}) {
         onClick={copyCommand}
         sx={{cursor: 'pointer', fontSize: '16px', marginLeft: '2px', "& :hover": {color:"#bbb"}, "& :active": {color:"#bbb"}}}
       />
-    </Box>
+    </span>
   </Tooltip>
 
 }
