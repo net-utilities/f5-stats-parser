@@ -1,4 +1,4 @@
-export default `ltm rule-event Common/_sys_APM_ExchangeSupport_OA_BasicAuth:ACCESS_ACL_ALLOWED {
+const ruleExampleData = `ltm rule-event Common/_sys_APM_ExchangeSupport_OA_BasicAuth:ACCESS_ACL_ALLOWED {
     aborts 0
     avg-cycles 0
     event-type ACCESS_ACL_ALLOWED
@@ -791,3 +791,5 @@ ltm rule-event Sample_http_02/A1/choose_pool:CLIENT_ACCEPTED {
     total-executions 0
 }
 `
+
+export default ruleExampleData;

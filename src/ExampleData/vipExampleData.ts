@@ -1,4 +1,4 @@
-export default `ltm virtual Common/bigipreport {
+const vipExampleData = `ltm virtual Common/bigipreport {
     clientside.bits-in 0
     clientside.bits-out 0
     clientside.cur-conns 0
@@ -798,3 +798,5 @@ ltm virtual example_NAT64/App1/service {
     syncookie.syncookies 0
     tot-requests 0
 }`
+
+export default vipExampleData;

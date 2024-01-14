@@ -1,15 +1,15 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import {LTMObject} from '../../Interfaces/ltmObjects';
+import {LTMObject} from '../../Interfaces/interfaces';
 import parseRule from '../../Helpers/ParseLTMPaste';
-import {ChangeEvent, useEffect} from 'react';
+import {useEffect} from 'react';
 
 export default function MultilineTextFields(props: { inputContent: string, setLTMData: (content: LTMObject[]) => void}) {
 
   const {inputContent, setLTMData} = props;
 
-  useEffect(() => setLTMData(parseRule(inputContent)),[inputContent]);
+  useEffect(() => setLTMData(parseRule(inputContent)),[inputContent, setLTMData]);
 
   return (
     <Box

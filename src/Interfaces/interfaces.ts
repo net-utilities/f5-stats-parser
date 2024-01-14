@@ -11,4 +11,6 @@ interface TableConfig {
   columnTranslations?: {[key: string]: string}
 }
 
+export type Section = 'about'|'commands'|'host';
+
 export type { LTMObject, TableConfig }

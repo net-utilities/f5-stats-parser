@@ -5,11 +5,10 @@ import Table from './Components/Table/Table';
 import Typography from '@mui/material/Typography';
 import {Grid, Paper} from '@mui/material';
 import TurnRightIcon from '@mui/icons-material/TurnRight';
-import {LTMObject} from './Interfaces/ltmObjects';
+import {LTMObject} from './Interfaces/interfaces';
 import Footer from './Components/Footer/Footer';
 import Index from './Components/HelpModal';
 import InfoIcon from '@mui/icons-material/Info';
-import Code from './Components/Command/Code';
 
 function App() {
 

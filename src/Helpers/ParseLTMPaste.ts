@@ -1,13 +1,6 @@
-import {LTMObject} from '../Interfaces/ltmObjects';
+import {LTMObject} from '../Interfaces/interfaces';
 
 function parseData(rawText: string): LTMObject[] {
-
-  const fN = (s:string) => parseInt(s.trim().split(' ')[1])
-  const fS = (s:string) => s.trim().split(' ')[1];
-
-  const a =  rawText
-    .trim()
-    .split(/\n}/)
 
   const ruleArr = rawText
     .trim()

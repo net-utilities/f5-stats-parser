@@ -1,4 +1,4 @@
-export default `ltm pool Common/always_down-pool {
+const poolExampleData = `ltm pool Common/always_down-pool {
     active-member-cnt 1
     available-member-cnt 1
     connq-all.age-edm 0
@@ -614,3 +614,5 @@ ltm pool example_NAT64/App1/web_pool {
     status.status-reason The children pool member(s) are down
     tot-requests 0
 }`;
+
+export default poolExampleData;

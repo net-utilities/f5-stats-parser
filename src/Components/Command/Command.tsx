@@ -2,7 +2,6 @@ import * as React from 'react';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import {Tooltip} from '@mui/material';
 import Code from './Code';
-import Box from '@mui/material/Box';
 
 export default function Command(props: {command: string}) {
 

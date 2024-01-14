@@ -1,4 +1,4 @@
-import {TableConfig} from '../Interfaces/ltmObjects';
+import {TableConfig} from '../Interfaces/interfaces';
 
 const fields: {[key: string]: TableConfig } = {
   'virtual': {

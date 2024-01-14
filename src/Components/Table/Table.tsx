@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {DataGrid, GridColDef, GridToolbar} from '@mui/x-data-grid';
 import filterFunctions from '../../Helpers/FieldTranslations';
-import {LTMObject} from '../../Interfaces/ltmObjects';
+import {LTMObject} from '../../Interfaces/interfaces';
 
 export default function DataTable(props: {ltmData: LTMObject[]}) {
 
@@ -14,7 +14,7 @@ export default function DataTable(props: {ltmData: LTMObject[]}) {
 
   columns.push({ field: 'name', headerName: 'name', flex: 1 })
   Object.keys(ltmData[0]).filter(k => !['name', 'type', 'id'].includes(k)).forEach((k) => {
-      columns.push({ field: k, headerName: columnTranslations && columnTranslations[k] || k});
+      columns.push({ field: k, headerName: (columnTranslations && columnTranslations[k]) || k});
   });
 
   const columnVisibility: {[key: string]: boolean} = {}
