@@ -13,7 +13,7 @@ export default function ExampleCommands() {
       The tool takes input from the <Code text={'tmsh show'}/> command with the <Code text={'field-fmt'}/> parameter.
     </Typography>
     <Typography sx={{marginTop: '1em'}}>
-      <Command command={`tmsh -c 'cd /;show ltm rule recursive'`}/> gets the
+      <Command command={`tmsh -c 'cd /;show ltm rule recursive field-fmt all'`}/> gets the
       iRule stats from all partitions.
     </Typography>
     <Typography>

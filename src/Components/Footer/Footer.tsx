@@ -32,10 +32,10 @@ export default function Footer(props: FooterProps) {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction label="About" onClick={() => { setOpen(true) }} icon={<InfoIcon />} />
-          <BottomNavigationAction label="Pool example"  onClick={() => {setInputContent(poolExampleData)}}icon={<PolylineIcon />} />
-          <BottomNavigationAction label="VIP example" onClick={() => {setInputContent(vipExampleData)}} icon={<VerticalAlignBottomIcon />} />
-          <BottomNavigationAction label="iRule example" onClick={() => {setInputContent(ruleExampleData)}} icon={<DataObjectIcon />} />
+          <BottomNavigationAction sx={{cursor: 'pointer'}} label="About" onClick={() => { setOpen(true) }} icon={<InfoIcon />} />
+          <BottomNavigationAction sx={{cursor: 'pointer'}} label="Pool example"  onClick={() => {setInputContent(poolExampleData)}}icon={<PolylineIcon />} />
+          <BottomNavigationAction sx={{cursor: 'pointer'}} label="VIP example" onClick={() => {setInputContent(vipExampleData)}} icon={<VerticalAlignBottomIcon />} />
+          <BottomNavigationAction sx={{cursor: 'pointer'}} label="iRule example" onClick={() => {setInputContent(ruleExampleData)}} icon={<DataObjectIcon />} />
         </BottomNavigation>
       </Paper>
     </Box>
