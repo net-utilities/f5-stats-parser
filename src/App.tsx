@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './index.css';
 import Input from './Components/Input/Input'
 import Table from './Components/Table/Table';
@@ -9,6 +9,7 @@ import {LTMObject} from './Interfaces/interfaces';
 import Footer from './Components/Footer/Footer';
 import Index from './Components/HelpModal';
 import InfoIcon from '@mui/icons-material/Info';
+import parseData from './Helpers/ParseLTMPaste';
 
 function App() {
 
@@ -16,9 +17,10 @@ function App() {
   const [inputContent, setInputContent] = useState<string>('')
   const [open, setOpen] = React.useState(false);
 
-  const handleLTMDataChange = (value: LTMObject[]) => {
-    setLtmData([...value])
-  }
+  console.log(ltmData)
+  useEffect(() => {
+    setLtmData([...parseData(inputContent)])
+  }, [inputContent]);
 
   return (
     <div className="App">
@@ -30,7 +32,7 @@ function App() {
         </Grid>
         <Grid item xs={12}>
           <Paper elevation={3}>
-            <Input inputContent={inputContent} setLTMData={handleLTMDataChange}/>
+            <Input inputContent={inputContent} setInputContent={setInputContent}/>
           </Paper>
         </Grid>
         <Grid item xs={12} mt={1}>
